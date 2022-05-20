@@ -1,0 +1,22 @@
+<form action="/add" method="POST">
+  <p>Título: </p>
+  <input type="text" name="titulo" />
+  <p>Conteúdo: </p>
+  <textarea name="conteudo"></textarea>
+  <button type="submit">Cadastrar postagem</button>
+</form>
+
+<!--  "method"  
+      É a forma como os dados do formulário será enviado para o Back-end;
+      Estes dados são enviados pelos verbos GET e POST    
+      -->
+<!--  GET:
+        envia os dados cadastrados abertamente, na url.
+          ex.: http://localhost:8081/rotaqualquer?titulo=Danilo&conteudo=Novo+Developer
+      POST
+        oculta os dados do cadastro enviados.
+          ex.: http://localhost:8081/rotaqualquer
+-->
+
+<!--É muito importante que as tags tenham o atributo "name"
+para fazer a cmunicação do cadastro com o Banco de Dados-->
