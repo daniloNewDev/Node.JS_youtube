@@ -4,7 +4,7 @@
   "description": "\"Introdução ao Node.js e MySQL\"",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon test.js",
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "\"Danilo Leite\"",
@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
     "mysql2": "^2.3.3",
     "sequelize": "^6.19.2"
   }

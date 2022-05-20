@@ -1,18 +1,20 @@
 const express = require("express");
-const app = express();
+const app = express(); //  Aplicação Web
+const handlebars = require("express-handlebars");
+const Sequelize = require("sequelize");
 
-app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/html/index.html");
+app.engine("handlebars", handlebars.engine({ defaultLayout: "main" }));
+app.set("views engine", "handlebars");
+
+const sequelize = new Sequelize("teste", "root", "ShalomMySQLSS22", {
+  host: "localhost",
+  dialect: "mysql",
 });
 
-app.get("/sobre", function (req, res) {
-  res.sendFile(__dirname + "/html/sobre.html");
+app.get("/cad", function (req, res) {
+  res.send("rota de cadastro de posts!");
 });
 
-app.get("/blog", function (req, res) {
-  res.send("Bem vindo ao meu blog.");
+app.listen(8081, (req, res) => {
+  console.log("Servidor rodando!");
 });
-
-app.listen(8081, function () {
-  console.log("Servidor rodando na localhost!");
-}); // Última linha do código.

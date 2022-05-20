@@ -54,6 +54,12 @@
     UPDATE nomeDaTabela SET nome = "Nome de Teste" WHERE nome = "Nenezinho Navarro";
           atualizar dados de tabelas. Nunca usar o DELETE sem o WHERE!
           
+    DELETE FROM nomeDaTabela;
+          Deleta TODA A TABELA!!!
+      
+    DELETE FROM nomeDaTabela WHERE nome = "Danilo";
+          serve para deletar registros dentro de uma tabela.
+          
     INSERT INTO usuarios(nome, idade, email) VALUES(
                                               "Danilo Leite",
                                               36,
@@ -63,13 +69,5 @@
       Os parâmetros e valores respectivos estão dispostos por ordem de inserção.
       No parâmetro são inseridos os dados. 
       para inserir novos dados ao TABLE.
-
-    DELETE FROM nomeDaTabela;
-      Deleta TODA A TABELA!!!
-
-    DELETE FROM nomeDaTabela WHERE nome = "Danilo";
-      serve para deletar registros dentro de uma tabela.
-
-
 
 */

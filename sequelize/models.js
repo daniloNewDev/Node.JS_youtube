@@ -6,7 +6,7 @@ const sequelize = new Sequelize("teste", "root", "12345", {
   dialect: "mysql",
 });
 
-const postagem = sequelize.define("postagens", {
+const Postagem = sequelize.define("postagens", {
   titulo: {
     type: Sequelize.STRING,
   },
@@ -15,7 +15,7 @@ const postagem = sequelize.define("postagens", {
   },
 });
 
-const usuario = sequelize.define("usuarios", {
+const Usuario = sequelize.define("usuarios", {
   nome: {
     type: Sequelize.STRING,
   },
@@ -30,9 +30,4 @@ const usuario = sequelize.define("usuarios", {
   },
 });
 
-usuario.create({
-  nome: "Danilo",
-  sNome: "Leite",
-  idade: 36,
-  email: "danilo@newdev.com",
-});
+// usuarios.sync({force: true})

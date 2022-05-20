@@ -1,4 +1,8 @@
-/*    Sequelize é um ORM. Um sistema que abstrai toda a camada de Banco de Dados.
+/*    Sequelize trabalha com um padrão chamado ORM (Mapeamento Objeto Relacional);
+
+      Serve pra deixar mais fácil o acesso aos Bancos de Dados usando JavaScript no Back-end;
+
+      Sequelize trabalha com Promisses (async e await);
 
   Conectando-se a um Banco de Dados usando o Sequelize:
 */
@@ -10,9 +14,11 @@ const sequelize = new Sequelize("teste", "root", "123456", {
   host: "localhost",
   dialect: "mysql",
 });
-//  Dentro do parâmetro de "new sequelize()" é que se faz a comunicação com o banco de dados;
+//  Dentro do parâmetro de "new sequelize()" é que se faz a comunicação com o banco de dados usando:
+
 //  No primeiro parâmetro do new Sequelize é pedido o nome da TABLE;
-//  O segundo parâmetro pede o Usuário, e no terceiro a senha;
+//  O segundo parâmetro pede o Usuário;
+//  No terceiro parâmetro a senha de acesso;
 //  No quarto parâmetro é requerido um "objeto JSON" com o "host" para servidor que hospéda o Banco de Dados, e o "dialect" que aponta qual sistema Banco de Dados irá conectar-se(MySQL)
 
 //
